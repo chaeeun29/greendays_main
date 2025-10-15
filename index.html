@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- 구글 - Baloo2 font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -88,6 +91,19 @@
     </style>
   </head>
   <body>
+    <div class="sec sec_4">
+      <div class="con"></div>
+    </div>
+    <div class="sec sec_5">
+      <div class="con"></div>
+    </div>
+    <div class="sec sec_6">
+      <div class="con"></div>
+    </div>
+    <div class="sec sec_7">
+      <div class="con"></div>
+    </div>
+
     <footer class="con-min-width">
       <div class="con">
         <div class="main_box">
@@ -95,10 +111,6 @@
             <p>Customer Center</p>
             <p>1600-0000</p>
             <p>Mon-Fri 10:00 - 18:00</p>
-          </div>
-
-          <div class="img-box">
-            <img src="imgs/ft_rotate.png" alt="">
           </div>
 
           <div class="menu_box">
@@ -114,6 +126,10 @@
         <div class="logo_box">
           <h3>GREENDAYS</h3>
         </div>
+      </div>
+
+      <div class="img-box">
+        <img src="imgs/ft_rotate.png" alt="" />
       </div>
     </footer>
 
@@ -204,6 +220,10 @@
         box-sizing: border-box;
       }
 
+      .sec {
+        height: 950px;
+      }
+
       /*---------- 푸터 시작 ----------*/
 
       footer {
@@ -213,13 +233,15 @@
         color: #1a5b47;
         font-family: "Pretendard";
         font-weight: 400;
+        position: relative;
+        transition: background-color 0.8s ease scale 0.8s 3s ease;
+        padding-top: 60px;
       }
 
       footer .con {
         max-width: 1620px;
         width: 100%;
         height: auto;
-        margin: 60px auto 0;
         overflow: hidden;
       }
 
@@ -250,13 +272,6 @@
         font-size: 15px;
       }
 
-      footer .img-box {
-        position: absolute;
-        top:295px;
-        left:55px;
-
-      }
-
       footer .main_box .menu_box {
         padding-right: 0;
       }
@@ -269,13 +284,11 @@
         font-size: 24px;
         font-weight: 700;
         padding-right: 101px;
-        
       }
 
       footer .main_box .menu_box ul li:last-child a {
         padding-right: 70px;
       }
-
 
       footer .logo_box {
         margin-top: 135px;
@@ -288,7 +301,53 @@
         margin: 0;
         padding: 0;
       }
+
+      footer .img-box {
+        position: absolute;
+        top: 285px;
+        left: 54px;
+      }
+
+      /* 이미지 초기 상태 */
+      footer .img-box img {
+        width: 141px;
+        transform: translate(0, 0) scale(1);
+        transition: transform 0.8s ease;
+        transition-delay: 0s;
+      }
+
+      /* 푸터 active */
+      footer.active {
+        background-color: #efebe2;
+      }
+
+      /* .3초 뒤 이미지 확장 */
+      footer.active .img-box img {
+        transform: translate(180px, 230px) scale(5.5);
+        transition-delay: .3s;
+      }
+
+
+
+
       /*---------- 푸터 끝 ----------*/
     </style>
+
+    <script>
+      $(window).on("scroll", function () {
+        const footer = $("footer");
+        const scrollY = $(window).scrollTop(); // 현재 스크롤 위치
+        const windowHeight = $(window).height(); // 브라우저 화면 높이
+        const footerTop = footer.offset().top; // footer가 문서 상단에서 떨어진 거리
+        const footerHeight = footer.outerHeight(); //footer의 맨 아래 위치
+        const footerBottom = footerTop + footerHeight;
+
+        if (scrollY <= footerTop && scrollY + windowHeight >= footerBottom) {
+          footer.addClass("active");
+        } else {
+          footer.removeClass("active");
+        }
+      });
+    </script>
   </body>
 </html>
