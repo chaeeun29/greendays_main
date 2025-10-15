@@ -17,6 +17,7 @@
     />
 
     <style>
+        /* font - pretendard */
       @font-face {
         font-family: "Pretendard";
         src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
@@ -88,15 +89,69 @@
         font-weight: 900;
         font-display: swap;
       }
+
+      /* font - 삼립호빵체 */
+      @font-face {
+        font-family: 'SandollSamlipHopang';
+        src: url('./fonts/_SDSamliphopangcheBasic.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        }
     </style>
   </head>
   <body>
-    <div class="sec sec_6">
-      <div class="con"></div>
+    <div class="sec sec_6 con-min-width">
+      <div class="con">
+        <div class="top_title">
+            <h3>지구를 지키는 용기<br>함께 만들어가는 우리의 내일<br>실천해요 제로웨이스트!</h3>
+        </div>
+
+        <div class="best_box">
+            <div class="pr_box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="txt_box">
+                <div class="top_txt">
+                    <h3>From Nature,<br>Soap Best Sellers</h3>
+                    <P>자연에서 온, 그린하루가 완성한 베스트 상품</P>
+                </div>
+
+                <div class="tab_box">
+                    <div class="tab_list">Hair Care</div>
+                    <div class="tab_list">Skin & Body</div>
+                    <div class="tab_list">Laundry</div>
+                    <div class="tab_list">Soap</div>
+                    <div class="tab_list">Air Freshener</div>
+                    <div class="tab_list">Refill</div>
+                </div>
+
+                <div class="btm_txt">
+                    <p>
+                        자연의 정직함을 담아, 피부와 지구 모두를 위한 세정을 완성합니다. 
+                        <br>
+                        당신의 일상이 더 가벼워지는 순간,
+                        <br>
+                        지속가느안 아름다움을 비누 한 조각에 담았습니다.
+                    </p>
+                    
+                    <div class="more">
+                        View More →
+                    </div>
+                </div>
+
+            </div>
+
+            
+            
+        </div>
+      </div>
     </div>
-    <div class="sec sec_7">
-      <div class="con"></div>
-    </div>
+
 
     <footer class="con-min-width">
       <div class="con">
@@ -248,6 +303,25 @@
       .sec {
         height: 950px;
       }
+      /* 라이브러리 끝 */
+
+      /*---------- sec6 시작 ----------*/
+
+      .sec_6 {
+        font-family: "Pretendard";
+      }
+
+      .sec_6 .top_title {
+        font-family: 'SandollSamlipHopang', sans-serif;
+        font-size: 55px;
+        color: #8C8C92;
+        line-height: 75px;
+
+      }
+
+
+
+      /*---------- sec6 끝 ----------*/
 
       /*---------- 푸터 시작 ----------*/
 
