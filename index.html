@@ -91,12 +91,6 @@
     </style>
   </head>
   <body>
-    <div class="sec sec_4">
-      <div class="con"></div>
-    </div>
-    <div class="sec sec_5">
-      <div class="con"></div>
-    </div>
     <div class="sec sec_6">
       <div class="con"></div>
     </div>
@@ -114,11 +108,42 @@
           </div>
 
           <div class="menu_box">
+            <div class="line"></div>
             <ul>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Service</a></li>
-              <li><a href="#">My Greendays</a></li>
-              <li><a href="#">Social</a></li>
+              <li>
+                <a href="#">Products</a>
+                <ul>
+                    <li><a href="#">전체상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li><a href="#">정기구독</a></li>
+                    <li><a href="#">제품리뷰</a></li>
+                </ul>
+            </li>
+              <li>
+                <a href="#">Service</a>
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">상품문의</a></li>
+                    <li><a href="#">상품후기</a></li>
+                </ul>
+            </li>
+              <li>
+                <a href="#">My Greendays</a>
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">주문조회</a></li>
+                </ul>
+            </li>
+              <li>
+                <a href="#">Social</a>
+                <ul>
+                    <li><a href="#">인스타그램</a></li>
+                    <li><a href="#">유튜브</a></li>
+                </ul>
+            </li>
             </ul>
           </div>
         </div>
@@ -236,6 +261,9 @@
         position: relative;
         transition: background-color 0.8s ease scale 0.8s 3s ease;
         padding-top: 60px;
+        overflow:hidden;
+        transition: background-color 0.8s ease;
+        transition-delay: 0s;
       }
 
       footer .con {
@@ -274,24 +302,61 @@
 
       footer .main_box .menu_box {
         padding-right: 0;
+        position: relative;
+        letter-spacing: -2.5%;
+      }
+
+      footer .main_box .menu_box .line {
+        width: 765px;
+        height: 1px;
+        background-color: #afc0b4;
+        position: absolute;
+        top:40px;
       }
 
       footer .main_box .menu_box ul {
         display: flex;
       }
 
+
+
       footer .main_box .menu_box ul li a {
         font-size: 24px;
         font-weight: 700;
-        padding-right: 101px;
+        padding-right: 90px;
       }
+
+
 
       footer .main_box .menu_box ul li:last-child a {
         padding-right: 70px;
       }
 
+      /* 2차메뉴 */
+
+      footer .main_box .menu_box ul ul {
+        display: block;
+        margin-top: 10px;
+
+      }
+
+      footer .main_box .menu_box ul ul li a {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 55px;
+      }
+
+      footer .main_box .menu_box .line,
+      footer .main_box .menu_box ul ul {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.8s, visibility .8s ease;
+        transition-delay: 0s;
+      }
+
+
       footer .logo_box {
-        margin-top: 135px;
+        margin-top: 10px;
         font-family: "Baloo 2", sans-serif;
         padding: 0;
       }
@@ -319,14 +384,22 @@
       /* 푸터 active */
       footer.active {
         background-color: #efebe2;
+        transition-delay: .5s;
       }
 
-      /* .3초 뒤 이미지 확장 */
+      /* 1초 뒤 이미지 확장 */
       footer.active .img-box img {
         transform: translate(180px, 230px) scale(5.5);
-        transition-delay: .3s;
+        transition-delay: 1s;
       }
 
+      /* 2초 뒤 2차메뉴 등장 */
+      footer.active .main_box .menu_box .line,
+      footer.active .main_box .menu_box ul ul {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 1.5s;
+      }
 
 
 
