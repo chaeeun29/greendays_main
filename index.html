@@ -16,8 +16,13 @@
       rel="stylesheet"
     />
 
+    <!-- 구글 - Abhaya Libre font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        /* font - pretendard */
+      /* font - pretendard */
       @font-face {
         font-family: "Pretendard";
         src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
@@ -92,30 +97,98 @@
 
       /* font - 삼립호빵체 */
       @font-face {
-        font-family: 'SandollSamlipHopang';
-        src: url('./fonts/_SDSamliphopangcheBasic.otf') format('opentype');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-        }
+    font-family: 'SandollSamlipHobbangBasic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+
+
+}
     </style>
   </head>
   <body>
     <div class="sec sec_6 con-min-width">
-      <div class="con">
+      <div class="con height-100p">
         <div class="top_title">
-            <h3>지구를 지키는 용기<br>함께 만들어가는 우리의 내일<br>실천해요 제로웨이스트!</h3>
+            <p>지구를 지키는 용기<br>함께 만들어가는 우리의 내일<br>실천해요 제로웨이스트!</h3>
         </div>
 
-        <div class="best_box">
-            <div class="pr_box">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <div class="best_box flex flex-ai-c">
+            <div class="pr_box flex border-black">
+
+                <div class="pr pr_1">
+                  <div class="best">
+                    BEST
+                  </div>
+
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>SOAP</p>
+                    <p><span>[130g]</span>핑크브리즈 자몽 | GrapeFruit</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+                <div class="pr pr_2">
+                  <div class="best">
+                    BEST
+                  </div>
+
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>SOAP</p>
+                    <p><span>[130g]</span>네이쳐스 올리브 | Olive</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+
+                <div class="pr pr_3">
+                  <div class="best">
+                    BEST
+                  </div>
+
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>SOAP</p>
+                    <p><span>[130g]</span>스위트 포도 | Grape</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+                <div class="pr pr_4">
+                  <div class="best">
+                    BEST
+                  </div>
+                  <div class="img-box">
+                    <img src="" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>SOAP</p>
+                    <p><span>[130g]</span>시트러스 레몬 | lemon</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+
+                
             </div>
 
-            <div class="txt_box">
+            <div class="txt_box border-blue">
                 <div class="top_txt">
                     <h3>From Nature,<br>Soap Best Sellers</h3>
                     <P>자연에서 온, 그린하루가 완성한 베스트 상품</P>
@@ -309,15 +382,129 @@
 
       .sec_6 {
         font-family: "Pretendard";
+        overflow: hidden;
+        height: 2420px;
+        background: url(imgs/main_product_background_photo2.png)
+      }
+
+      .sec_6 .con {
+        width: 1560px;
       }
 
       .sec_6 .top_title {
-        font-family: 'SandollSamlipHopang', sans-serif;
+        font-family: 'SandollSamlipHobbangBasic';
         font-size: 55px;
         color: #8C8C92;
         line-height: 75px;
+      }
+
+      .sec_6 .top_title p {
+        margin: 94px 0 106px 0;
+      }
+
+      /* 베스트 박스에서 상품박스 */
+
+      .sec_6 .best_box .pr_box {
+        flex-wrap: wrap;
+        width:742px;
+      }
+
+      .sec_6 .best_box .pr_box .pr {
+        width: 336px;
+        height: 465px;
+        background-color: #f9f9f9;
+        border: 5px solid #EDF0F3;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .sec_6 .best_box .pr_box .pr .best {
+        position: absolute;
+        width: 39px;
+        height: 17px;
+        background-color: rgba(232, 95, 11, 0.53);
+        color: #EFEADD;
+        text-align: center;
+        line-height: 17px;
+        font-size: 11px;
+        border-radius: 2px;
+        top: 15px;
+        left: 10px;
+      }
+
+      .sec_6 .best_box .pr_box .pr:nth-child(2n-1) {
+        margin-right: 70px;
+      }
+
+      .sec_6 .best_box .pr_box .pr:nth-child(1),
+      .sec_6 .best_box .pr_box .pr:nth-child(2) {
+        margin-bottom: 104px;
+      }
+
+       .sec_6 .best_box .pr_box .img-box {
+        width: 100%;
+        height: 343px;
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      /* 베스트 박스에서 텍스트박스 */
+
+      .sec_6 .best_box .pr_box .pr_txt {
+        width: 100%;
+        height: 102px;
+        margin: 0;
+        padding: 0;
+        background-color: #EDF0F3;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+
+      .sec_6 .best_box .pr_box .pr_txt p:first-child {
+        font-size: 14px;
+        color: #E85F0B;
+        padding: 10px 0 0 10px;
 
       }
+
+      .sec_6 .best_box .pr_box .pr_txt p:nth-child(2) {
+        font-weight: 300;
+        margin-top: -7px;
+
+
+      }
+      
+
+      .sec_6 .best_box .pr_box .pr_txt p:last-child {
+        color: #7e7e7e;
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 15px;
+      }
+
+
+
+      .sec_6 .best_box .pr_box .pr_txt > p > span {
+        font-size: 14px;
+        color: #7e7e7e;
+        font-family: "Abhaya Libre", serif;
+        font-weight: 400;
+        font-style: normal;
+        padding: 0 10px;
+
+
+      }
+
+      .sec_6 .best_box .pr_box .pr_txt .line {
+        width: 304px;
+        height: 1px;
+        background-color: #D4CEC7;
+        margin-top: -10px;
+      }
+
+      /* 베스트 박스에서 텍스트 박스 */
 
 
 
