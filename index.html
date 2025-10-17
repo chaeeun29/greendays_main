@@ -111,10 +111,10 @@
     <div class="sec sec_6 con-min-width">
       <div class="con height-100p">
         <div class="top_title">
-            <p>지구를 지키는 용기<br>함께 만들어가는 우리의 내일<br>실천해요 제로웨이스트!</h3>
+            <p>지구를 지키는 용기<br>함께 만들어가는 우리의 내일<br>실천해요 제로웨이스트!</p>
         </div>
 
-        <div class="best_box flex flex-ai-c border-black">
+        <div class="best_box flex">
             <div class="pr_box flex">
 
                 <div class="pr pr_1">
@@ -123,7 +123,7 @@
                   </div>
 
                   <div class="img-box">
-                    <img src="" alt="">
+                    <img src="imgs/sec6_soap_grapefruit.png" alt="">
                   </div>
 
                   <div class="pr_txt">
@@ -140,7 +140,7 @@
                   </div>
 
                   <div class="img-box">
-                    <img src="" alt="">
+                    <img src="imgs/sec6_soap_olive.png" alt="">
                   </div>
 
                   <div class="pr_txt">
@@ -158,7 +158,7 @@
                   </div>
 
                   <div class="img-box">
-                    <img src="" alt="">
+                    <img src="imgs/sec6_soap_grape.png" alt="">
                   </div>
 
                   <div class="pr_txt">
@@ -174,7 +174,7 @@
                     BEST
                   </div>
                   <div class="img-box">
-                    <img src="" alt="">
+                    <img src="imgs/sec6_soap_lemon.png" alt="">
                   </div>
 
                   <div class="pr_txt">
@@ -189,7 +189,7 @@
                 
             </div>
 
-            <div class="txt_box border-blue">
+            <div class="txt_box">
                 <div class="top_txt">
                     <p>From Nature,<br>Soap Best Sellers</p>
                     <P>자연에서 온, 그린하루가 완성한 베스트 상품</P>
@@ -210,7 +210,7 @@
                         <br>
                         당신의 일상이 더 가벼워지는 순간,
                         <br>
-                        지속가느안 아름다움을 비누 한 조각에 담았습니다.
+                        지속가능한 아름다움을 비누 한 조각에 담았습니다.
                     </p>
                     
                     <div class="more">
@@ -219,12 +219,80 @@
                 </div>
 
             </div>
+        </div>
 
-            
-            
+        <div class="all_box">
+          <div class="all flex">
+            <p class="txt">
+              ALL
+            </p>
+
+            <div class="more">
+                View More →
+            </div>
+          </div>
+
+          <div class="pr_box flex">
+
+                <div class="pr pr_1">
+                  <div class="img-box">
+                    <img src="imgs/sec6_detergent_peach.png" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>DETERGENT</p>
+                    <p><span>[2000ml]</span>피치 프레시 | Peach </p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+                <div class="pr pr_2">
+
+                  <div class="img-box">
+                    <img src="imgs/sec6_detergent_cotton.png" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>DETERGENT</p>
+                    <p><span>[2000ml]</span>코튼퓨어 | Cotton</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+
+                <div class="pr pr_3">
+
+                  <div class="img-box">
+                    <img src="imgs/sec6_detergent_lilac.png" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>DETERGENT</p>
+                    <p><span>[2000ml]</span>라일락 가든 | Lilac</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
+
+                <div class="pr pr_4">
+
+                  <div class="img-box">
+                    <img src="imgs/sec6_detergent_whitemusk.png" alt="">
+                  </div>
+
+                  <div class="pr_txt">
+                    <p>DETERGENT</p>
+                    <p><span>[2000ml]</span>화이트 블렌드 | White Musk</p>
+                    <div class="line"></div>
+                    <p>14,500원</p>
+                  </div>
+                </div>
         </div>
       </div>
     </div>
+  </div>
 
 
     <footer class="con-min-width">
@@ -405,12 +473,16 @@
 
       /* 베스트 박스에서 상품박스 */
 
+      .sec_6 .best_box {
+        align-items: flex-start;
+      }
+
       .sec_6 .best_box .pr_box {
         flex-wrap: wrap;
         width:742px;
       }
 
-      .sec_6 .best_box .pr_box .pr {
+      .sec_6 .pr_box .pr {
         width: 336px;
         height: 465px;
         background-color: #f9f9f9;
@@ -442,7 +514,7 @@
         margin-bottom: 104px;
       }
 
-       .sec_6 .best_box .pr_box .img-box {
+      .sec_6 .pr_box .img-box {
         width: 100%;
         height: 343px;
         margin: 0;
@@ -450,9 +522,23 @@
         
       }
 
-      /* 베스트 박스에서 텍스트박스 */
+      /* 베스트 / 올 박스에서 이미지박스 */
 
-      .sec_6 .best_box .pr_box .pr_txt {
+      .sec_6 .pr_box .pr .img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      .sec_6 .pr_box .pr .img-box > img {
+        width: 250px;
+        height: 187px;
+      }
+
+      /* 베스트 / 올 박스에서 텍스트박스 */
+
+      .sec_6 .pr_box .pr_txt {
         width: 100%;
         height: 102px;
         margin: 0;
@@ -463,14 +549,14 @@
       }
 
 
-      .sec_6 .best_box .pr_box .pr_txt p:first-child {
+      .sec_6 .pr_box .pr_txt p:first-child {
         font-size: 14px;
         color: #E85F0B;
         padding: 10px 0 0 10px;
 
       }
 
-      .sec_6 .best_box .pr_box .pr_txt p:nth-child(2) {
+      .sec_6 .pr_box .pr_txt p:nth-child(2) {
         font-weight: 300;
         margin-top: -7px;
 
@@ -478,7 +564,7 @@
       }
       
 
-      .sec_6 .best_box .pr_box .pr_txt p:last-child {
+      .sec_6 .pr_box .pr_txt p:last-child {
         color: #7e7e7e;
         text-align: right;
         padding-right: 10px;
@@ -487,7 +573,7 @@
 
 
 
-      .sec_6 .best_box .pr_box .pr_txt > p > span {
+      .sec_6 .pr_box .pr_txt > p > span {
         font-size: 14px;
         color: #7e7e7e;
         font-family: "Abhaya Libre", serif;
@@ -498,7 +584,7 @@
 
       }
 
-      .sec_6 .best_box .pr_box .pr_txt .line {
+      .sec_6 .pr_box .pr_txt .line {
         width: 304px;
         height: 1px;
         background-color: #D4CEC7;
@@ -507,7 +593,6 @@
 
       /* 베스트 박스에서 텍스트 박스 */
       .sec_6 .best_box .txt_box {
-        height: ;
         color: #656566;
         margin: 0 0 0 240px;
       }
@@ -517,17 +602,20 @@
         font-family: "Abhaya Libre", serif;
         font-weight: 500;
         font-style: normal;
+        margin: 10px 0 0 0;
       }
 
       .sec_6 .best_box .txt_box .top_txt p:last-child {
         font-size: 30px;
         font-weight: 600;
+        margin: 20px 0 0 0;
       }
 
       /* 텍스트 박스에서 탭 박스 */
 
       .sec_6 .best_box .txt_box .tab_box {
         width: 520px;
+        margin-top: 50px;
       }
 
       .sec_6 .best_box .txt_box .tab_list {
@@ -537,7 +625,7 @@
         display: inline-block;
         border-radius: 100px;
         padding: 5px 20px;
-        margin: 10px;
+        margin: 10px 8px;
       }
 
       /* 텍스트 박스에서 아래 글씨 */
@@ -547,6 +635,57 @@
         line-height: 30px;
         letter-spacing: -0.25%;
         font-weight: 500;
+        margin-top: 50px;
+      }
+
+      .sec_6 .more {
+        width: 170px;
+        height: 56px;
+        border: 0.5px solid #000;
+        border-radius: 30px;
+        font-size: 20px;
+        color: #656566;
+        font-weight: 200;
+        text-align: center;
+        line-height: 56px;
+        margin-top: 65px;
+      }
+
+      /* 올 박스 시작  */
+
+      .all_box {
+        margin-top: 150px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .all_box .all {
+        justify-content: space-between;
+        margin: 0;
+        padding: 150px 0 60px 0;
+      }
+
+      .all_box .all .txt {
+        font-family: 'SandollSamlipHobbangBasic';
+        font-size: 40px;
+        color: #656566;
+        margin: 0;
+        padding: 0;
+      }
+
+      .all_box .all .more {
+        margin: 0;
+        padding: 0;
+      }
+
+      .all_box .pr_box {
+        gap: 70px;
+      }
+
+
+      .sec_6 .all_box .pr_box .pr .img-box > img {
+        width: 160px;
+        height: 320px;
       }
 
 
